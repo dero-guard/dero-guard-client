@@ -1,0 +1,53 @@
+@import './vars';
+
+button, a, .clickable {
+    cursor: pointer;
+    transition: opacity .15s;
+    
+    &:hover {
+        opacity: .75;
+    }
+    
+    &:active {
+        opacity: .5;
+    }
+}
+
+.selectable {
+    user-select: text;
+}
+
+.card {
+    background-color: $card-background;
+    
+    border: $card-border;
+    border-radius: 4px;
+    
+    margin: 15px;
+    margin-top: 0;
+    padding: 15px;
+    padding-top: 12px;
+    
+    flex-direction: column;
+    
+    .title {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .content {
+        flex-grow: 1;
+    
+        &, & button {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, .8);
+        }
+    }
+}
+
+.button {
+    padding: 10px 45px;
+    
+    border: $card-border;
+    background-color: $card-background;
+    border-radius: 3px;
+}
